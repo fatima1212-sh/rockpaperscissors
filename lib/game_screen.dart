@@ -47,7 +47,7 @@ class _GameScreenState extends State<GameScreen> {
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
         padding: const EdgeInsets.all(24),
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Color.fromARGB(255, 76, 157, 233),
       ),
       onPressed: () => _playGame(emoji),
       child: Text(emoji, style: const TextStyle(fontSize: 40)),
@@ -67,7 +67,7 @@ class _GameScreenState extends State<GameScreen> {
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  color: Colors.black),
             ),
             const SizedBox(height: 30),
 
@@ -78,22 +78,20 @@ class _GameScreenState extends State<GameScreen> {
                 Column(
                   children: [
                     const Text('You:',
-                        style: TextStyle(color: Colors.white, fontSize: 22)),
+                        style: TextStyle(color: Colors.black, fontSize: 22)),
                     Text(playerChoice, style: const TextStyle(fontSize: 40)),
                   ],
                 ),
                 Column(
                   children: [
                     const Text('Computer:',
-                        style: TextStyle(color: Colors.white, fontSize: 22)),
+                        style: TextStyle(color: Colors.black, fontSize: 22)),
                     Text(computerChoice, style: const TextStyle(fontSize: 40)),
                   ],
                 ),
               ],
             ),
             const SizedBox(height: 25),
-
-            // Buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -104,26 +102,23 @@ class _GameScreenState extends State<GameScreen> {
             ),
             const SizedBox(height: 25),
 
-            // Result message
             Text(
               message,
               style: const TextStyle(
                   fontSize: 22,
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 25),
 
-            // Scores
             Text(
               'Your Score: $playerScore   Computer Score: $computerScore',
-              style: const TextStyle(fontSize: 18, color: Colors.white),
+              style: const TextStyle(fontSize: 18, color: Colors.black),
             ),
             const SizedBox(height: 30),
 
-            // Reset button
             IconButton(
-              icon: const Icon(Icons.refresh, color: Colors.white, size: 40),
+              icon: const Icon(Icons.refresh, color: Colors.black, size: 40),
               onPressed: _resetGame,
             ),
           ],
